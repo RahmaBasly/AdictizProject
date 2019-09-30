@@ -8,13 +8,20 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class AdzRechercheComponent implements OnInit {
 
+
   constructor(private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit() {
   }
 
-  navigate(q){
-    this.router.navigate(['/resultat/q'])
+  public navigate(url, id) {
+    this.router.navigate([url, id]).then( (e) => {
+      if (e) {
+        console.log("Navigation is successful!");
+      } else {
+        console.log("Navigation has failed!");
+      }
+    });
   }
 
 }

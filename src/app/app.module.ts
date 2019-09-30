@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AdzRechercheComponent } from './adz-recherche/adz-recherche.component';
 import { AdzResultatComponent } from './adz-resultat/adz-resultat.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
