@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdzRechercheComponent } from './adz-recherche.component';
+import { AdzPageNotFoundComponent } from './adz-page-not-found.component';
 
-describe('AdzRechercheComponent', () => {
-  let component: AdzRechercheComponent;
-  let fixture: ComponentFixture<AdzRechercheComponent>;
+describe('AdzPageNotFoundComponent', () => {
+  let component: AdzPageNotFoundComponent;
+  let fixture: ComponentFixture<AdzPageNotFoundComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdzRechercheComponent ]
+      declarations: [ AdzPageNotFoundComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdzRechercheComponent);
+    fixture = TestBed.createComponent(AdzPageNotFoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

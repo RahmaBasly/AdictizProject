@@ -1,8 +1,7 @@
 
 <div id="container" class="center">
-  <input  type="text" #nomlivre placeholder="Entrez le nom de votre livre"
-         style="width: 180px" (change)="navigate('/resultat',nomlivre.value)"
-          name="livrerecherche" [(ngModel)]="livrerecherche">
+  <input  type="text"  placeholder="Entrez le nom de votre livre"
+          style="width: 180px" [(ngModel)]="bookFilter.title">
 </div>
 
 

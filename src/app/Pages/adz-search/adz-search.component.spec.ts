@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdzResultatComponent } from './adz-resultat.component';
+import { AdzSearchComponent } from './adz-search.component';
 
-describe('AdzResultatComponent', () => {
-  let component: AdzResultatComponent;
-  let fixture: ComponentFixture<AdzResultatComponent>;
+describe('AdzSearchComponent', () => {
+  let component: AdzSearchComponent;
+  let fixture: ComponentFixture<AdzSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdzResultatComponent ]
+      declarations: [ AdzSearchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdzResultatComponent);
+    fixture = TestBed.createComponent(AdzSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

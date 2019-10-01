@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {AdzRechercheComponent} from './Pages/adz-recherche/adz-recherche.component';
-import {AdzResultatComponent} from './Pages/adz-resultat/adz-resultat.component';
-import {PageNotFoundComponent} from "./Pages/page-not-found/page-not-found.component";
+import {AdzPageNotFoundComponent} from "./Pages/adz-page-not-found/adz-page-not-found.component";
+import {AdzHomeComponent} from "./Pages/adz-home/adz-home.component";
+import {AdzSearchComponent} from "./Pages/adz-search/adz-search.component";
+
 
 const routes: Routes = [
-  {path: 'recherche', component:AdzRechercheComponent },
-  {path: 'resultat/:q', component:AdzResultatComponent },
+  {path: '', component: AdzHomeComponent },
+  {path: 'search', component: AdzSearchComponent },
   {path: '',   redirectTo: '/', pathMatch: 'full' },
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', component: AdzPageNotFoundComponent }
 ];
 
 @NgModule({
