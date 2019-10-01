@@ -21,6 +21,7 @@ export class AdzResultatComponent implements OnInit {
 
 
   ngOnInit() {
+    //Récupération du paramétre envoyer en url
     this.route.params.subscribe(params => {
       this.param = params.q;
       console.log(params['q']);
@@ -29,6 +30,8 @@ export class AdzResultatComponent implements OnInit {
     this.service.getBooks().subscribe(
       data => {
         this.listBooks = data ;
+        //Ngfor peut seulement lire à partir d'un Array
+        //Conversion de listBooks de Object à Array
         this.listBooks = Array.of(this.listBooks);
         console.log(this.listBooks);
       }

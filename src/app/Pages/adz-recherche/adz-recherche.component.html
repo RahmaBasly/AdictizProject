@@ -1,12 +1,12 @@
-<p id="title" class="center"> Bienvenue dans votre page de recherche</p>
 
 <div id="container" class="center">
-  <input id="txtrch" type="text" #nomlivre placeholder="Entrez le nom de votre livre" style="width: 180px" (change)="navigate('/resultat',nomlivre.value)">
+  <input  type="text" #nomlivre placeholder="Entrez le nom de votre livre"
+         style="width: 180px" (change)="navigate('/resultat',nomlivre.value)"
+          name="livrerecherche" [(ngModel)]="livrerecherche">
 </div>
 
+
 <style>
-
-
 
   div{
     margin: 20px;

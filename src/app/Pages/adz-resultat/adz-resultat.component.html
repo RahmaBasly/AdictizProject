@@ -5,7 +5,9 @@
     <td>Title</td>
     <td>subtitle</td>
   </tr>
-  <tr *ngFor="let book of listBooks">
+  <input  type="text"
+          name="livrerecherche" [(ngModel)]="livrerecherche">
+  <tr *ngFor="let book of listBooks | rechercherlivre:livrerecherche">
     <td>{{book.items[0].volumeInfo.title}}</td>
     <td>{{book.items[0].volumeInfo.subtitle}}</td>
   </tr>

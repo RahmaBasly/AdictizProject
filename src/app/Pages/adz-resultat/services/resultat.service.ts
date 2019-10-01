@@ -10,6 +10,7 @@ export class ResultatService {
 
   constructor(private http: HttpClient) {}
 
+  //Récupération de la liste des livres depuis l'url (json)
   getBooks() {
     return this.http.get(this.urlBooks);
   }
