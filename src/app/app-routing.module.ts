@@ -9,6 +9,8 @@ const routes: Routes = [
   {path: '', component: AdzHomeComponent },
   {path: 'search', component: AdzSearchComponent },
   {path: '',   redirectTo: '/', pathMatch: 'full' },
+
+  // otherwise redirect to page not found
   {path: '**', component: AdzPageNotFoundComponent }
 ];
 
