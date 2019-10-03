@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="topnav">
+  <div>
+    <a ><img src="../../../assets/images/logo-Adictiz-main-menu.png" alt="adictiz-logo"></a>
+  </div>
+  <div>
+    <a (click)="switchLanguage('fr')"><img src="../../../assets/images/icons8-france-48.png" alt="flag-fr"></a>
+    <a (click)="switchLanguage('en')"><img src="../../../assets/images/icons8-great-britain-48.png" alt="flag-en"></a>
+  </div>
+</div>
+
+<p id="title" class="center"> {{ 'header-title' | translate:header-title }} </p>
+<p> {{ 'header-description' | translate:header-description }}</p>
+
+
+</body>
+</html>

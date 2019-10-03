@@ -27,7 +27,7 @@ export class AdzHomeComponent  implements OnInit  {
     language: ''
   }
 
-  constructor(private booksService:BooksService , private translate: TranslateService,public dialog: MatDialog) { }
+  constructor(private booksService:BooksService ,public dialog: MatDialog) { }
   ngOnInit() {
 
     this.booksService.getAllBooks().subscribe(
@@ -52,9 +52,7 @@ export class AdzHomeComponent  implements OnInit  {
     );
   }
 
-  switchLanguage(language: string) {
-    this.translate.use(language);
-  }
+
 
 
 

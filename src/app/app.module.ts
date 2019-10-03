@@ -21,6 +21,8 @@ import { AdzPageNotFoundComponent } from './Pages/adz-page-not-found/adz-page-no
 import { AdzPopupComponent } from './Pages/adz-popup/adz-popup.component';
 import { SearchPipe } from './Pipes/search.pipe';
 import { LanguagePipe } from './Pipes/language.pipe';
+import { AdzHeaderComponent } from './Pages/adz-header/adz-header.component';
+import { AdzFooterComponent } from './Pages/adz-footer/adz-footer.component';
 
 
 
@@ -32,7 +34,9 @@ import { LanguagePipe } from './Pipes/language.pipe';
     AdzPageNotFoundComponent,
     SearchPipe,
     LanguagePipe,
-    AdzPopupComponent
+    AdzPopupComponent,
+    AdzHeaderComponent,
+    AdzFooterComponent
   ],
   entryComponents: [AdzPopupComponent],
   imports: [

@@ -2,7 +2,7 @@
 "header-title":" Moteur de recherche de livre",
 "header-description":"Bienvenue sur adictiz book store, vous pouvez trouver une diversité de choix de livre.",
 "choose-category":"Choisir une catégorie",
-"allCategory":"Toutes les catégories",
+"all-category":"Toutes les catégories",
 "nobooksfound":"Aucun livre trouvé",
 "authors":"Auteur(s)",
 "unknown":"Inconnu",
@@ -12,5 +12,7 @@
 "Language":"Langue",
 "Categories":"Catégorie(s)",
 "Close":"Fermer",
-"searchinput":"Rechercher Livre par : Titre, Auteur, Editeur et Catégorie"
+"searchinput":"Rechercher Livre par : Titre, Auteur, Editeur et Catégorie",
+  "titre":"Titre",
+  "place-holder":"mot clés"
 }

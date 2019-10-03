@@ -1,39 +1,39 @@
+<app-adz-header></app-adz-header>
 
+<app-adz-search [bookFilter]="bookFilter"></app-adz-search>
+<div class="row">
 
-<button type="button" (click)="switchLanguage('fr')">Français</button>
-<button type="button" (click)="switchLanguage('en')">Anglais</button>
+  <p>Filter : </p>
+  <select type="text" [(ngModel)]="bookFilter.categories">
+    <option value="">{{ 'all-category' | translate:all-category}}</option>
+    <option *ngFor="let category of listCategories" value="{{category}}">{{category}}</option>
+  </select>
+  <select type="text" [(ngModel)]="bookFilter.authors">
+    <option value="">{{ 'authors' | translate:authors}}</option>
+    <option *ngFor="let authors of listAuthors" value="{{authors}}">{{authors}}</option>
+  </select>
+  <select class="form-control-sm" type="text" [(ngModel)]="bookFilter.language">
+    <option value="">{{ 'Language' | translate:Language}}</option>
+    <option value="ar">Arabic</option>
+    <option value="fr">French</option>
+    <option value="en">English</option>
+  </select>
+</div>
 
-<p id="title" class="center"> {{ 'header-title' | translate:header-title }} </p>
-<p> {{ 'header-description' | translate:header-description }}</p>
+<br>
 
-
-<app-adz-search [bookFilter]="bookFilter" ></app-adz-search>
-<p>Filter : </p>
-<select  type="text" [(ngModel)]="bookFilter.categories">
-  <option value="">Category</option>
-  <option *ngFor="let category of listCategories" value="{{category}}">{{category}}</option>
-</select>
-<select  type="text" [(ngModel)]="bookFilter.authors">
-  <option value="">Authors</option>
-  <option *ngFor="let authors of listAuthors" value="{{authors}}">{{authors}}</option>
-</select>
-<select class="form-control-sm" type="text" [(ngModel)]="bookFilter.language">
-  <option value="">Language</option>
-  <option value="ar">Arabic</option>
-  <option value="fr">French</option>
-  <option value="en">English</option>
-</select>
-
-<!--<select  type="text" [(ngModel)]="bookFilter.language">-->
-  <!--<option value="">Language</option>-->
-  <!--<option *ngFor="let language of listLanguages" value="{{language}}">{{language}}</option>-->
-<!--</select>-->
-<ul *ngFor="let book of listBooks | search:bookFilter.title | search:bookFilter.authors | search:bookFilter.publisher
+<div class="column" *ngFor="let book of listBooks | search:bookFilter.title | search:bookFilter.authors | search:bookFilter.publisher
                                   | search:bookFilter.categories | language:bookFilter.language">
-  <li>{{book.volumeInfo.title}}</li>
-  <li>{{book.volumeInfo.authors}}</li>
-  <li>{{book.volumeInfo.language}}</li>
-  <li><button  (click)="openModal(book)">Details</button>
-  </li>
-</ul>
+  <div class="row">
+    <p><strong>{{ 'titre' | translate:titre}} :</strong> <span>{{book.volumeInfo.title}}</span> </p>
+    <p><strong>{{ 'authors' | translate:authors}} :</strong> <span>{{book.volumeInfo.authors}}</span></p>
+    <p><strong>{{ 'Language' | translate:Language}} :</strong> <span>{{book.volumeInfo.language}}</span></p>
+    <button (click)="openModal(book)">Details</button>
+  </div>
+
+</div>
+<app-adz-footer></app-adz-footer>
+
+
+
 

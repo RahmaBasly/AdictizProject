@@ -1,7 +1,39 @@
-<h2 mat-dialog-title>This is title</h2>
+<h2 mat-dialog-title>{{book.volumeInfo.title}}</h2>
 <mat-dialog-content>
   <div class="rowDetails">
-    <p>Okk {{book.volumeInfo.title}}</p>
+    <div>
+      <img *ngIf="book.volumeInfo.imageLinks!==undefined" src="{{book.volumeInfo.imageLinks.thumbnail}}" width="200px" height="300px" alt="thumbnail">
+      <img *ngIf="book.volumeInfo.imageLinks===undefined" src="http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg" width="200px" height="300px" alt="no-thumbnail">
+    </div>
+    <div class="bookInfos">
+        <p>
+          <strong>Author: </strong>
+          <span *ngIf="book.volumeInfo.authors==undefined">No Author</span>
+          <span *ngIf="book.volumeInfo.authors!==undefined">{{book.volumeInfo.authors}}</span>
+        </p>
+        <p>
+          <strong>Publisher: </strong>
+          <span *ngIf="book.volumeInfo.publisher==undefined">No Publisher</span>
+          <span *ngIf="book.volumeInfo.publisher!==undefined">{{book.volumeInfo.publisher}}</span>
+        </p>
+        <p> <strong>Date: </strong>
+          <span *ngIf="book.volumeInfo.publishedDate==undefined">No Date</span>
+          <span *ngIf="book.volumeInfo.publishedDate!==undefined">{{book.volumeInfo.publishedDate}}</span>
+        </p>
+        <p> <strong>Category: </strong>
+          <span *ngIf="book.volumeInfo.categories==undefined">No Category</span>
+          <span *ngIf="book.volumeInfo.categories!==undefined">{{book.volumeInfo.categories}}</span>
+        </p>
+        <p> <strong>Language: </strong>
+          <span *ngIf="book.volumeInfo.language==undefined">No Language</span>
+          <span *ngIf="book.volumeInfo.language!==undefined">{{book.volumeInfo.language}}</span>
+        </p>
+        <p> <strong>Link: </strong>
+          <span *ngIf="book.accessInfo.webReaderLink==undefined">No Link</span>
+          <span *ngIf="book.accessInfo.webReaderLink!==undefined"><a href="{{book.accessInfo.webReaderLink}}">Read</a></span>
+        </p>
+
+    </div>
   </div>
 </mat-dialog-content>
 <mat-dialog-actions>
